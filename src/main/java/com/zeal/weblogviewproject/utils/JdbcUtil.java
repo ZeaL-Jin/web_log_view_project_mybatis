@@ -15,9 +15,10 @@ public class JdbcUtil {
 
     /**
      * 封装SQL的Connection为一个方法
+     *
      * @return 返回连接对象
      */
-    public Connection getConnection(){
+    public Connection getConnection() {
         try {
             //jdbc规范
             //1.导入jdbc的jar包
@@ -33,9 +34,10 @@ public class JdbcUtil {
 
     /**
      * 静态方法，关闭资源
+     *
      * @param connection 数据库连接
-     * @param statement 数据库连接状态
-     * @param resultSet 数据集
+     * @param statement  数据库连接状态
+     * @param resultSet  数据集
      */
     public void close(Connection connection, Statement statement, ResultSet resultSet) {
         //6.关闭资源

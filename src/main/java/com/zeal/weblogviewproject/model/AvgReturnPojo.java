@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * @author ZEAL
  * pojo领域模型对象
- *
  */
 public class AvgReturnPojo {
     private List<String> dates;

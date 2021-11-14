@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
     /*
-    * basePath：http://localhost:8080/web_log_view_project_war_exploded/
-    * request.getScheme()：http
-    * request.getServerName()：localhost
-    * request.getServerPort()：8080
-    * request.getContextPath()：web_log_view_project_war_exploded
-    * */
+     * basePath：http://localhost:8080/web_log_view_project_war_exploded/
+     * request.getScheme()：http
+     * request.getServerName()：localhost
+     * request.getServerPort()：8080
+     * request.getContextPath()：web_log_view_project_war_exploded
+     * */
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -151,7 +151,8 @@
                             </div>
                         </a></li>
                         <li class="external"><a href="#"> See All Tasks </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <!-- END NOTIFY TASK BAR -->
 
                 <!-- START NOTIFY INBOX BAR -->
@@ -191,7 +192,8 @@
 								</span> <span class="message"> Hello, this is metrolab </span>
                         </a></li>
                         <li><a href="#"> See all messages </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <!-- END NOTIFY INBOX BAR -->
 
                 <!-- START NOTIFY NOTIFICATION BAR -->
@@ -231,7 +233,8 @@
 								</span> Application error. <span class="small italic"> 10 mins </span>
                         </a></li>
                         <li><a href="#"> See all notifications </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <!-- END NOTIFY NOTIFICATION BAR -->
 
             </ul>
@@ -248,7 +251,8 @@
                            placeholder="Search"></li>
                 <li class="dropdown"><a data-toggle="dropdown"
                                         class="dropdown-toggle" href="#"> <img alt=""
-                                                                               src="img/avatar1_small.jpg"> <span class="username">
+                                                                               src="img/avatar1_small.jpg"> <span
+                        class="username">
 								ADMIN BLACK </span> <b class="caret"> </b>
                 </a>
                     <ul class="dropdown-menu extended logout">
@@ -264,7 +268,8 @@
                         <li><a href="login.html"> <i class="fa fa-key"> </i> Log
                             Out
                         </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- END USER LOGIN DROPDOWN  -->
@@ -287,7 +292,8 @@
                         <li><a href="flow-contract.html"> 对比分析 </a></li>
                         <li><a href="flow-online.html"> 当前在线 </a></li>
                         <li><a href="flow-detail.html"> 访问明细 </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
 
                 <li class="sub-menu"><a href="javascript:;"> <i
                         class="fa fa-th"> </i> <span> 来源分析 </span>
@@ -298,7 +304,8 @@
                         <li><a href="#"> 搜索词 </a></li>
                         <li><a href="#"> 来路域名 </a></li>
                         <li><a href="#"> 来路页面 </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
 
                 <li class="sub-menu"><a href="javascript:;"> <i
                         class="fa fa-book"> </i> <span> 受访分析 </span>
@@ -309,7 +316,8 @@
                         <li><a href="#"> 受访页面 </a></li>
                         <li><a href="#"> 受访升降榜 </a></li>
                         <li><a href="#"> 热点图 </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
 
                 <li class="sub-menu"><a href="javascript:;"> <i
                         class="fa fa-th"> </i> <span> 访客分析 </span>
@@ -320,7 +328,8 @@
                         <li><a href="dynamic_table.html"> 新老访客</a></li>
                         <li><a href="advanced_table.html"> 忠诚度 </a></li>
                         <li><a href="editable_table.html"> 活跃度 </a></li>
-                    </ul></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </aside>
@@ -398,56 +407,54 @@
                             <script type="text/javascript">
                                 /*jquery的初始化函数*/
                                 $(document).ready(
-                                    function() {
+                                    function () {
                                         // 3.基于准备好的dom，初始化echarts实例
                                         var myChart = echarts.init(document.getElementById('main1'));
                                         // 4.指定图表的配置项和数据
                                         // 显示标题，图例和空的坐标轴
                                         myChart.setOption({
-                                            title : {
-                                                text : '最近7天日平均PV量',
+                                            title: {
+                                                text: '最近7天日平均PV量',
                                                 subtext: '动态数据'
                                             },
-                                            tooltip : {},
-                                            legend : {
-                                                data : [ '日平均PV量' ]
+                                            tooltip: {},
+                                            legend: {
+                                                data: ['日平均PV量']
                                             },
-                                            xAxis : {
-                                                data : []
+                                            xAxis: {
+                                                data: []
                                             },
-                                            yAxis : {},
-                                            series : [ {
-                                                name : '日平均PV量',
-                                                type : 'bar',
-                                                data : []
-                                            } ]
+                                            yAxis: {},
+                                            series: [{
+                                                name: '日平均PV量',
+                                                type: 'bar',
+                                                data: []
+                                            }]
                                         });
                                         // 5.使用刚指定的配置项和数据显示图表。
                                         //loading 动画
                                         myChart.showLoading();
                                         //4.1 ajax异步请求动态获取图表数据
                                         $.ajax({
-                                            type:"post",
-                                            url:"<%=basePath%>/AvgPvNum",
-                                            dataType:"json",
-                                            success:function(data) {
+                                            type: "post",
+                                            url: "<%=basePath%>/AvgPvNum",
+                                            dataType: "json",
+                                            success: function (data) {
                                                 myChart.setOption({
-                                                    xAxis : {
-                                                        data : data.dates
+                                                    xAxis: {
+                                                        data: data.dates
                                                     },
-                                                    series : [ {
+                                                    series: [{
                                                         // 根据名字对应到相应的系列
-                                                        name : 'PV量',
-                                                        data : data.data
-                                                    } ]
+                                                        name: 'PV量',
+                                                        data: data.data
+                                                    }]
                                                 });
                                                 //数据加载完成后再调用 hideLoading 方法隐藏加载动画
                                                 myChart.hideLoading();
 
                                             }
                                         });
-
-
 
 
                                     });
@@ -469,37 +476,37 @@
 
                                 myChart
                                     .setOption({
-                                        series : [ {
-                                            name : '访问来源',
-                                            type : 'pie',
-                                            radius : '55%',
-                                            data : [ {
-                                                value : 235,
-                                                name : '视频广告'
+                                        series: [{
+                                            name: '访问来源',
+                                            type: 'pie',
+                                            radius: '55%',
+                                            data: [{
+                                                value: 235,
+                                                name: '视频广告'
                                             }, {
-                                                value : 274,
-                                                name : '联盟广告'
+                                                value: 274,
+                                                name: '联盟广告'
                                             }, {
-                                                value : 310,
-                                                name : '邮件营销'
+                                                value: 310,
+                                                name: '邮件营销'
                                             }, {
-                                                value : 335,
-                                                name : '直接访问'
+                                                value: 335,
+                                                name: '直接访问'
                                             }, {
-                                                value : 400,
-                                                name : '搜索引擎'
-                                            } ]
-                                        } ],
-                                        itemStyle : {
-                                            normal : {
+                                                value: 400,
+                                                name: '搜索引擎'
+                                            }]
+                                        }],
+                                        itemStyle: {
+                                            normal: {
                                                 // 阴影的大小
-                                                shadowBlur : 200,
+                                                shadowBlur: 200,
                                                 // 阴影水平方向上的偏移
-                                                shadowOffsetX : 0,
+                                                shadowOffsetX: 0,
                                                 // 阴影垂直方向上的偏移
-                                                shadowOffsetY : 0,
+                                                shadowOffsetY: 0,
                                                 // 阴影颜色
-                                                shadowColor : 'rgba(0, 0, 0, 0.5)'
+                                                shadowColor: 'rgba(0, 0, 0, 0.5)'
                                             }
                                         }
                                     })
@@ -522,37 +529,37 @@
                                 // 基于准备好的dom，初始化echarts实例
                                 var myChart3 = echarts.init(document.getElementById('main3'));
                                 option = {
-                                    title : {
+                                    title: {
                                         text: '访客来源地区分布图',
                                         subtext: '模拟数据',
-                                        x:'center'
+                                        x: 'center'
                                     },
-                                    tooltip : {
+                                    tooltip: {
                                         trigger: 'item'
                                     },
                                     legend: {
                                         orient: 'vertical',
-                                        x:'left',
-                                        data:['访客UV']
+                                        x: 'left',
+                                        data: ['访客UV']
                                     },
                                     dataRange: {
                                         min: 0,
                                         max: 2500,
                                         x: 'left',
                                         y: 'bottom',
-                                        text:['高','低'],           // 文本，默认为数值文本
-                                        calculable : true
+                                        text: ['高', '低'],           // 文本，默认为数值文本
+                                        calculable: true
                                     },
                                     toolbox: {
                                         show: true,
-                                        orient : 'vertical',
+                                        orient: 'vertical',
                                         x: 'right',
                                         y: 'center',
-                                        feature : {
-                                            mark : {show: true},
-                                            dataView : {show: true, readOnly: false},
-                                            restore : {show: true},
-                                            saveAsImage : {show: true}
+                                        feature: {
+                                            mark: {show: true},
+                                            dataView: {show: true, readOnly: false},
+                                            restore: {show: true},
+                                            saveAsImage: {show: true}
                                         }
                                     },
                                     roamController: {
@@ -562,51 +569,51 @@
                                             'china': true
                                         }
                                     },
-                                    series : [
+                                    series: [
                                         {
                                             name: '访客UV',
                                             type: 'map',
                                             mapType: 'china',
                                             roam: false,
-                                            itemStyle:{
-                                                normal:{label:{show:true}},
-                                                emphasis:{label:{show:true}}
+                                            itemStyle: {
+                                                normal: {label: {show: true}},
+                                                emphasis: {label: {show: true}}
                                             },
-                                            data:[
-                                                {name: '北京',value: Math.round(Math.random()*1000)},
-                                                {name: '天津',value: Math.round(Math.random()*1000)},
-                                                {name: '上海',value: Math.round(Math.random()*1000)},
-                                                {name: '重庆',value: Math.round(Math.random()*1000)},
-                                                {name: '河北',value: Math.round(Math.random()*1000)},
-                                                {name: '河南',value: Math.round(Math.random()*1000)},
-                                                {name: '云南',value: Math.round(Math.random()*1000)},
-                                                {name: '辽宁',value: Math.round(Math.random()*1000)},
-                                                {name: '黑龙江',value: Math.round(Math.random()*1000)},
-                                                {name: '湖南',value: Math.round(Math.random()*1000)},
-                                                {name: '安徽',value: Math.round(Math.random()*1000)},
-                                                {name: '山东',value: Math.round(Math.random()*1000)},
-                                                {name: '新疆',value: Math.round(Math.random()*1000)},
-                                                {name: '江苏',value: Math.round(Math.random()*1000)},
-                                                {name: '浙江',value: Math.round(Math.random()*1000)},
-                                                {name: '江西',value: Math.round(Math.random()*1000)},
-                                                {name: '湖北',value: Math.round(Math.random()*1000)},
-                                                {name: '广西',value: Math.round(Math.random()*1000)},
-                                                {name: '甘肃',value: Math.round(Math.random()*1000)},
-                                                {name: '山西',value: Math.round(Math.random()*1000)},
-                                                {name: '内蒙古',value: Math.round(Math.random()*1000)},
-                                                {name: '陕西',value: Math.round(Math.random()*1000)},
-                                                {name: '吉林',value: Math.round(Math.random()*1000)},
-                                                {name: '福建',value: Math.round(Math.random()*1000)},
-                                                {name: '贵州',value: Math.round(Math.random()*1000)},
-                                                {name: '广东',value: Math.round(Math.random()*1000)},
-                                                {name: '青海',value: Math.round(Math.random()*1000)},
-                                                {name: '西藏',value: Math.round(Math.random()*1000)},
-                                                {name: '四川',value: Math.round(Math.random()*1000)},
-                                                {name: '宁夏',value: Math.round(Math.random()*1000)},
-                                                {name: '海南',value: Math.round(Math.random()*1000)},
-                                                {name: '台湾',value: Math.round(Math.random()*1000)},
-                                                {name: '香港',value: Math.round(Math.random()*1000)},
-                                                {name: '澳门',value: Math.round(Math.random()*1000)}
+                                            data: [
+                                                {name: '北京', value: Math.round(Math.random() * 1000)},
+                                                {name: '天津', value: Math.round(Math.random() * 1000)},
+                                                {name: '上海', value: Math.round(Math.random() * 1000)},
+                                                {name: '重庆', value: Math.round(Math.random() * 1000)},
+                                                {name: '河北', value: Math.round(Math.random() * 1000)},
+                                                {name: '河南', value: Math.round(Math.random() * 1000)},
+                                                {name: '云南', value: Math.round(Math.random() * 1000)},
+                                                {name: '辽宁', value: Math.round(Math.random() * 1000)},
+                                                {name: '黑龙江', value: Math.round(Math.random() * 1000)},
+                                                {name: '湖南', value: Math.round(Math.random() * 1000)},
+                                                {name: '安徽', value: Math.round(Math.random() * 1000)},
+                                                {name: '山东', value: Math.round(Math.random() * 1000)},
+                                                {name: '新疆', value: Math.round(Math.random() * 1000)},
+                                                {name: '江苏', value: Math.round(Math.random() * 1000)},
+                                                {name: '浙江', value: Math.round(Math.random() * 1000)},
+                                                {name: '江西', value: Math.round(Math.random() * 1000)},
+                                                {name: '湖北', value: Math.round(Math.random() * 1000)},
+                                                {name: '广西', value: Math.round(Math.random() * 1000)},
+                                                {name: '甘肃', value: Math.round(Math.random() * 1000)},
+                                                {name: '山西', value: Math.round(Math.random() * 1000)},
+                                                {name: '内蒙古', value: Math.round(Math.random() * 1000)},
+                                                {name: '陕西', value: Math.round(Math.random() * 1000)},
+                                                {name: '吉林', value: Math.round(Math.random() * 1000)},
+                                                {name: '福建', value: Math.round(Math.random() * 1000)},
+                                                {name: '贵州', value: Math.round(Math.random() * 1000)},
+                                                {name: '广东', value: Math.round(Math.random() * 1000)},
+                                                {name: '青海', value: Math.round(Math.random() * 1000)},
+                                                {name: '西藏', value: Math.round(Math.random() * 1000)},
+                                                {name: '四川', value: Math.round(Math.random() * 1000)},
+                                                {name: '宁夏', value: Math.round(Math.random() * 1000)},
+                                                {name: '海南', value: Math.round(Math.random() * 1000)},
+                                                {name: '台湾', value: Math.round(Math.random() * 1000)},
+                                                {name: '香港', value: Math.round(Math.random() * 1000)},
+                                                {name: '澳门', value: Math.round(Math.random() * 1000)}
                                             ]
                                         },
 
@@ -636,91 +643,91 @@
 
                                 // 指定图表的配置项和数据
                                 option = {
-                                    title : {
-                                        text : '近一周访客数量变化趋势',
-                                        subtext : '动态数据'
+                                    title: {
+                                        text: '近一周访客数量变化趋势',
+                                        subtext: '动态数据'
                                     },
-                                    tooltip : {
-                                        trigger : 'axis'
+                                    tooltip: {
+                                        trigger: 'axis'
                                     },
-                                    legend : {
-                                        data : [ '独立访客', '新独立访客' ]
+                                    legend: {
+                                        data: ['独立访客', '新独立访客']
                                     },
-                                    toolbox : {
-                                        show : true,
-                                        feature : {
-                                            mark : {
-                                                show : true
+                                    toolbox: {
+                                        show: true,
+                                        feature: {
+                                            mark: {
+                                                show: true
                                             },
-                                            dataView : {
-                                                show : true,
-                                                readOnly : false
+                                            dataView: {
+                                                show: true,
+                                                readOnly: false
                                             },
-                                            magicType : {
-                                                show : true,
-                                                type : [ 'line', 'bar' ]
+                                            magicType: {
+                                                show: true,
+                                                type: ['line', 'bar']
                                             },
-                                            restore : {
-                                                show : true
+                                            restore: {
+                                                show: true
                                             },
-                                            saveAsImage : {
-                                                show : true
+                                            saveAsImage: {
+                                                show: true
                                             }
                                         }
                                     },
-                                    calculable : true,
-                                    xAxis : [ {
-                                        type : 'category',
-                                        boundaryGap : false,
-                                        data : []
-                                    } ],
-                                    yAxis : [ {
-                                        type : 'value',
-                                        axisLabel : {
-                                            formatter : '{value} 人'
+                                    calculable: true,
+                                    xAxis: [{
+                                        type: 'category',
+                                        boundaryGap: false,
+                                        data: []
+                                    }],
+                                    yAxis: [{
+                                        type: 'value',
+                                        axisLabel: {
+                                            formatter: '{value} 人'
                                         }
-                                    } ],
-                                    series : [
+                                    }],
+                                    series: [
                                         {
-                                            name : '独立访客',
-                                            type : 'line',
-                                            data : [],
-                                            markPoint : {
-                                                data : [ {
-                                                    type : 'max',
-                                                    name : '最大值'
+                                            name: '独立访客',
+                                            type: 'line',
+                                            data: [],
+                                            markPoint: {
+                                                data: [{
+                                                    type: 'max',
+                                                    name: '最大值'
                                                 }, {
-                                                    type : 'min',
-                                                    name : '最小值'
-                                                } ]
+                                                    type: 'min',
+                                                    name: '最小值'
+                                                }]
                                             },
-                                            markLine : {
-                                                data : [ {
-                                                    type : 'average',
-                                                    name : '平均值'
-                                                } ]
+                                            markLine: {
+                                                data: [{
+                                                    type: 'average',
+                                                    name: '平均值'
+                                                }]
                                             }
                                         },
                                         {
-                                            name : '新独立访客',
-                                            type : 'line',
-                                            data : [],
-                                            markPoint : {
-                                                data : [ {
-                                                    type : 'max',
-                                                    name : '最大值'
+                                            name: '新独立访客',
+                                            type: 'line',
+                                            data: [],
+                                            markPoint: {
+                                                data: [{
+                                                    type: 'max',
+                                                    name: '最大值'
                                                 }, {
-                                                    type : 'min',
-                                                    name : '最小值'
-                                                } ]
+                                                    type: 'min',
+                                                    name: '最小值'
+                                                }]
                                             },
-                                            markLine : {
-                                                data : [ {
-                                                    type : 'average',
-                                                    name : '平均值'
-                                                } ]
+                                            markLine: {
+                                                data: [{
+                                                    type: 'average',
+                                                    name: '平均值'
+                                                }]
                                             }
-                                        } ]
+                                        }]
                                 };
 
                                 // 使用刚指定的配置项和数据显示图表。
@@ -729,13 +736,11 @@
                                 // 异步加载数据
 
 
-
-
                                 $.ajax({
-                                    type:"post",
-                                    url:"<%=basePath%>flowNum.action",
-                                    dataType:"json",
-                                    success:function(data) {
+                                    type: "post",
+                                    url: "<%=basePath%>flowNum.action",
+                                    dataType: "json",
+                                    success: function (data) {
                                         myChart4.setOption({
                                             xAxis: {
                                                 data: data.dates
@@ -743,7 +748,7 @@
                                             series: [{
                                                 name: '独立访客',
                                                 data: data.uvs
-                                            },{
+                                            }, {
                                                 name: '新独立访客',
                                                 data: data.new_uvs
                                             }]

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author ZEAL
- *AvgPvNumDao接口的实现类
+ * AvgPvNumDao接口的实现类
  */
 public class AvgPvNumDaoImpl implements AvgPvNumDao {
     @Override
@@ -32,7 +32,7 @@ public class AvgPvNumDaoImpl implements AvgPvNumDao {
             //结果集
             resultSet = statement.executeQuery(sql);
             avgPvNumList = new ArrayList<>();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Long id = resultSet.getLong("id");
                 String dateStr = resultSet.getString("dateStr");
                 Float avgPvNum = resultSet.getFloat("avgPvNum");

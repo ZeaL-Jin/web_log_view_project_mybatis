@@ -12,21 +12,19 @@ Primary use:	Admin Side Used Template.
 -------------------------------------------------------------------*/
 
 
-
 /*------------------------------------------------------------------
 [1. Table CSS (Media Screen)]
 */
 
 
-
 @media only screen and (max-width: 800px) {
-    #unseen table td:nth-child(2),#unseen table th:nth-child(2) {
+    #unseen table td:nth-child(2), #unseen table th:nth-child(2) {
         display: none;
     }
 }
 
 @media only screen and (max-width: 640px) {
-    #unseen table td:nth-child(4),#unseen table th:nth-child(4),#unseen table td:nth-child(7),#unseen table th:nth-child(7),#unseen table td:nth-child(8),#unseen table th:nth-child(8) {
+    #unseen table td:nth-child(4), #unseen table th:nth-child(4), #unseen table td:nth-child(7), #unseen table th:nth-child(7), #unseen table td:nth-child(8), #unseen table th:nth-child(8) {
         display: none;
     }
 }
@@ -45,7 +43,7 @@ Primary use:	Admin Side Used Template.
         zoom: 1;
     }
 
-    #flip-scroll *:first-child+html .cf {
+    #flip-scroll *:first-child + html .cf {
         zoom: 1;
     }
 
@@ -55,7 +53,7 @@ Primary use:	Admin Side Used Template.
         border-spacing: 0;
     }
 
-    #flip-scroll th,#flip-scroll td {
+    #flip-scroll th, #flip-scroll td {
         margin: 0;
         vertical-align: top;
     }
@@ -118,13 +116,13 @@ Primary use:	Admin Side Used Template.
         border-left: 1px solid #babcbf;
     }
 
-    #flip-scroll th:last-child,#flip-scroll td:last-child {
+    #flip-scroll th:last-child, #flip-scroll td:last-child {
         border-bottom: 1px solid #babcbf;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    #no-more-tables table,#no-more-tables thead,#no-more-tables tbody,#no-more-tables th,#no-more-tables td,#no-more-tables tr {
+    #no-more-tables table, #no-more-tables thead, #no-more-tables tbody, #no-more-tables th, #no-more-tables td, #no-more-tables tr {
         display: block;
     }
 

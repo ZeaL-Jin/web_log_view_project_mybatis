@@ -18,6 +18,7 @@ import java.io.PrintWriter;
 @WebServlet(name = "FlowInformationController", value = "/flowInformationController")
 public class FlowInformationController extends HttpServlet {
     FlowInformationServiceImpl flowInformationServiceImpl = new FlowInformationServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         FlowReturnPojo flowReturnPojo = flowInformationServiceImpl.getFlowReturnPojo();
@@ -39,5 +40,6 @@ public class FlowInformationController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);    }
+        doGet(request, response);
+    }
 }

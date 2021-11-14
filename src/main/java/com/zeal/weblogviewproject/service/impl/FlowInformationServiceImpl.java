@@ -14,8 +14,8 @@ import java.util.List;
 public class FlowInformationServiceImpl {
     private FlowInformationDaoImpl flowInformationDao = new FlowInformationDaoImpl();
 
-    public FlowReturnPojo getFlowReturnPojo(){
-        List<FlowInformation> informationList =  flowInformationDao.getFlowInformation();
+    public FlowReturnPojo getFlowReturnPojo() {
+        List<FlowInformation> informationList = flowInformationDao.getFlowInformation();
 
         ArrayList<String> datesArrays = new ArrayList<>();
         ArrayList<Integer> dataArrays1 = new ArrayList<>();
@@ -24,7 +24,7 @@ public class FlowInformationServiceImpl {
         ArrayList<Integer> dataArrays4 = new ArrayList<>();
         ArrayList<Integer> dataArrays5 = new ArrayList<>();
 
-        for(FlowInformation flowInformation : informationList){
+        for (FlowInformation flowInformation : informationList) {
             datesArrays.add(flowInformation.getDateStr());
             dataArrays1.add(flowInformation.getpVNum());
             dataArrays2.add(flowInformation.getuVNum());

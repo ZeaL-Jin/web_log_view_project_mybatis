@@ -18,9 +18,10 @@ import java.io.PrintWriter;
  * AvgPvNumController类（t_avgpv_num表的controller层）
  * 对表的数据获取和展示
  */
-@WebServlet(name = "AvgPvNumController",value = "/AvgPvNum")
+@WebServlet(name = "AvgPvNumController", value = "/AvgPvNum")
 public class AvgPvNumController extends HttpServlet {
     AvgPvNumServiceImpl avgPvNumServiceImpl = new AvgPvNumServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //(一)调用service层的代码去获取avgReturnPojo对象
@@ -43,7 +44,7 @@ public class AvgPvNumController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }
 

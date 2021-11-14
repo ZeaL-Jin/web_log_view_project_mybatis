@@ -11,6 +11,7 @@ import java.util.List;
 public interface FlowInformationDao {
     /**
      * 获取流量信息
+     *
      * @return
      */
     List<FlowInformation> getFlowInformation();

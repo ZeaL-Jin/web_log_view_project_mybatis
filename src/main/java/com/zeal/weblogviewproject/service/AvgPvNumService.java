@@ -9,6 +9,7 @@ import com.zeal.weblogviewproject.model.AvgReturnPojo;
 public interface AvgPvNumService {
     /**
      * 获取日平均访问量的pojo对象
+     *
      * @return
      */
     AvgReturnPojo getAvgReturnPojo();

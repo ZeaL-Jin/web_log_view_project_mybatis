@@ -13,7 +13,7 @@ import java.util.List;
  * @author ZEAL
  */
 public class FlowInformationDaoImpl {
-    public List<FlowInformation> getFlowInformation(){
+    public List<FlowInformation> getFlowInformation() {
         //JdbcUtil工具类
         JdbcUtil jdbcUtil = new JdbcUtil();
         Statement statement = null;
@@ -31,7 +31,7 @@ public class FlowInformationDaoImpl {
             //结果集
             resultSet = statement.executeQuery(sql);
             flowInformationList = new ArrayList<>();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String dateStr = resultSet.getString("dateStr");
                 int pvNum = resultSet.getInt("pVNum");
@@ -40,7 +40,7 @@ public class FlowInformationDaoImpl {
                 int newUvNum = resultSet.getInt("newUvNum");
                 int visitNum = resultSet.getInt("visitNum");
 
-                FlowInformation flowInformationDb = new FlowInformation(id,dateStr,pvNum,uVNum,iPNum,newUvNum,visitNum);
+                FlowInformation flowInformationDb = new FlowInformation(id, dateStr, pvNum, uVNum, iPNum, newUvNum, visitNum);
 
                 flowInformationList.add(flowInformationDb);
             }

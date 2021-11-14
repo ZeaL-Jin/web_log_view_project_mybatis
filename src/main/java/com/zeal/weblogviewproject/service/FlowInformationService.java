@@ -9,6 +9,7 @@ import com.zeal.weblogviewproject.model.FlowReturnPojo;
 public interface FlowInformationService {
     /**
      * 获取流量信息的pojo对象
+     *
      * @return
      */
     FlowReturnPojo getFlowReturnPojo();

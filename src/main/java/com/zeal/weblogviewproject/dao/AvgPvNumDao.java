@@ -12,6 +12,7 @@ import java.util.List;
 public interface AvgPvNumDao {
     /**
      * 获取日平均访问量（规则）
+     *
      * @return
      */
     List<AvgPvNum> getAvgPvNumList();
