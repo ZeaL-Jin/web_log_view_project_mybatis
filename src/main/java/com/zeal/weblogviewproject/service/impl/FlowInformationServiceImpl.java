@@ -1,9 +1,11 @@
 package com.zeal.weblogviewproject.service.impl;
 
-import com.zeal.weblogviewproject.dao.impl.FlowInformationDaoImpl;
+import com.zeal.weblogviewproject.dao.impl.FlowInformationMapperDaoImpl;
 import com.zeal.weblogviewproject.model.FlowInformation;
 import com.zeal.weblogviewproject.model.FlowReturnPojo;
+import com.zeal.weblogviewproject.service.FlowInformationService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,11 +13,12 @@ import java.util.List;
  * @author ZEAL
  * FlowInformationService实现类
  */
-public class FlowInformationServiceImpl {
-    private FlowInformationDaoImpl flowInformationDao = new FlowInformationDaoImpl();
+public class FlowInformationServiceImpl implements FlowInformationService {
+    private FlowInformationMapperDaoImpl flowInformationMapperDaoImpl = new FlowInformationMapperDaoImpl();
 
-    public FlowReturnPojo getFlowReturnPojo() {
-        List<FlowInformation> informationList = flowInformationDao.getFlowInformation();
+    @Override
+    public FlowReturnPojo getFlowReturnPojo() throws IOException {
+        List<FlowInformation> informationList = flowInformationMapperDaoImpl.getFlowInformation();
 
         ArrayList<String> datesArrays = new ArrayList<>();
         ArrayList<Integer> dataArrays1 = new ArrayList<>();

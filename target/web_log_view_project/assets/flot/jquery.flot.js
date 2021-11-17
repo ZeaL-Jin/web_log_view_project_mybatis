@@ -58,6 +58,7 @@ Licensed under the MIT license.
             function H(J, K, I) {
                 return K < J ? J : (K > I ? I : K)
             }
+
             G.r = H(0, parseInt(G.r), 255);
             G.g = H(0, parseInt(G.g), 255);
             G.b = H(0, parseInt(G.b), 255);
@@ -217,11 +218,11 @@ Licensed under the MIT license.
 
         var devicePixelRatio = window.devicePixelRatio || 1,
             backingStoreRatio =
-            context.webkitBackingStorePixelRatio ||
-            context.mozBackingStorePixelRatio ||
-            context.msBackingStorePixelRatio ||
-            context.oBackingStorePixelRatio ||
-            context.backingStorePixelRatio || 1;
+                context.webkitBackingStorePixelRatio ||
+                context.mozBackingStorePixelRatio ||
+                context.msBackingStorePixelRatio ||
+                context.oBackingStorePixelRatio ||
+                context.backingStorePixelRatio || 1;
 
         this.pixelRatio = devicePixelRatio / backingStoreRatio;
 
@@ -1392,17 +1393,17 @@ Licensed under the MIT license.
                     var delta;
 
                     switch (s.bars.align) {
-                    case "left":
-                        delta = 0;
-                        break;
-                    case "right":
-                        delta = -s.bars.barWidth;
-                        break;
-                    case "center":
-                        delta = -s.bars.barWidth / 2;
-                        break;
-                    default:
-                        throw new Error("Invalid bar alignment: " + s.bars.align);
+                        case "left":
+                            delta = 0;
+                            break;
+                        case "right":
+                            delta = -s.bars.barWidth;
+                            break;
+                        case "center":
+                            delta = -s.bars.barWidth / 2;
+                            break;
+                        default:
+                            throw new Error("Invalid bar alignment: " + s.bars.align);
                     }
 
                     if (s.bars.horizontal) {
@@ -1432,7 +1433,7 @@ Licensed under the MIT license.
             // from a previous plot in this container that we'll try to re-use.
 
             placeholder.css("padding", 0) // padding messes up the positioning
-            .children(":not(.flot-base,.flot-overlay)").remove();
+                .children(":not(.flot-base,.flot-overlay)").remove();
 
             if (placeholder.css("position") == 'static')
                 placeholder.css("position", "relative"); // for positioning labels and overlay
@@ -1515,8 +1516,8 @@ Licensed under the MIT license.
             // data point to canvas coordinate
             if (t == identity) // slight optimization
                 axis.p2c = function (p) {
-                return (p - m) * s;
-            };
+                    return (p - m) * s;
+                };
             else
                 axis.p2c = function (p) {
                     return (t(p) - m) * s;
@@ -1540,8 +1541,8 @@ Licensed under the MIT license.
                 labelHeight = opts.labelHeight || 0,
                 maxWidth = labelWidth || axis.direction == "x" ? Math.floor(surface.width / (ticks.length || 1)) : null;
             legacyStyles = axis.direction + "Axis " + axis.direction + axis.n + "Axis",
-            layer = "flot-" + axis.direction + "-axis flot-" + axis.direction + axis.n + "-axis " + legacyStyles,
-            font = opts.font || "flot-tick-label tickLabel";
+                layer = "flot-" + axis.direction + "-axis flot-" + axis.direction + axis.n + "-axis " + legacyStyles,
+                font = opts.font || "flot-tick-label tickLabel";
 
             for (var i = 0; i < ticks.length; ++i) {
 
@@ -2817,17 +2818,17 @@ Licensed under the MIT license.
             var barLeft;
 
             switch (series.bars.align) {
-            case "left":
-                barLeft = 0;
-                break;
-            case "right":
-                barLeft = -series.bars.barWidth;
-                break;
-            case "center":
-                barLeft = -series.bars.barWidth / 2;
-                break;
-            default:
-                throw new Error("Invalid bar alignment: " + series.bars.align);
+                case "left":
+                    barLeft = 0;
+                    break;
+                case "right":
+                    barLeft = -series.bars.barWidth;
+                    break;
+                case "center":
+                    barLeft = -series.bars.barWidth / 2;
+                    break;
+                default:
+                    throw new Error("Invalid bar alignment: " + series.bars.align);
             }
 
             var fillStyleCallback = series.bars.fill ? function (bottom, top) {

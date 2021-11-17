@@ -9,7 +9,8 @@ Version:	1.1
 Last change:	[INITIAL RELEASE]
 Assigned to:	Olive Enterprise (Surat,IN)
 Primary use:	Admin Side Used Template. 
--------------------------------------------------------------------*/3
+-------------------------------------------------------------------*/
+3
 
 
 /*------------------------------------------------------------------
@@ -17,11 +18,11 @@ Primary use:	Admin Side Used Template.
 */
 
 
-#sidebar,.header,.site-footer {
+#sidebar, .header, .site-footer {
     display: none;
 }
 
-.header,.site-footer {
+.header, .site-footer {
     min-height: 0;
 }
 

@@ -40,7 +40,7 @@ Primary use:	Admin Side Used Template.
         display: block;
     }
 
-    .chat-room .left-side,.chat-room .mid-side,.chat-room .right-side,.chat-room .left-side footer {
+    .chat-room .left-side, .chat-room .mid-side, .chat-room .right-side, .chat-room .left-side footer {
         width: 100%;
     }
 
@@ -52,11 +52,11 @@ Primary use:	Admin Side Used Template.
         margin-bottom: 20px;
     }
 
-    .chat-room .left-side,.chat-room .mid-side {
+    .chat-room .left-side, .chat-room .mid-side {
         margin-bottom: 10px;
     }
 
-    .chat-room .left-side .user-head,.chat-room-head,.chat-room .right-side .user-head {
+    .chat-room .left-side .user-head, .chat-room-head, .chat-room .right-side .user-head {
         border-radius: 4px 4px 0 0;
         -webit-border-radius: 4px 4px 0 0;
     }
@@ -88,7 +88,7 @@ Primary use:	Admin Side Used Template.
     }
 
     .chat-room .mid-side {
-        margin-bottom: 0!important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -111,47 +111,50 @@ Primary use:	Admin Side Used Template.
     }
 
     #main-content {
-        margin: 0px!important;
-        position: none!important;
+        margin: 0px !important;
+        position: none !important;
     }
 
-    #sidebar>ul>li>a>span {
-        
+    #sidebar > ul > li > a > span {
+
     }
 
-    #sidebar>ul>li {
+    #sidebar > ul > li {
         margin: 0 10px 5px 10px;
     }
 
-    #sidebar>ul>li>a {
+    #sidebar > ul > li > a {
         height: 35px;
         line-height: 35px;
         padding: 0 10px;
         text-align: left;
     }
 
-    #sidebar>ul>li>a i {
+    #sidebar > ul > li > a i {
     }
 
     .mail-info, .mail-info:hover {
         display: none !important;
     }
+
     #sidebar ul > li > a .arrow, #sidebar > ul > li > a .arrow.open {
         margin-right: 10px;
         margin-top: 15px;
     }
 
     #sidebar ul > li.active > a .arrow, #sidebar ul > li > a:hover .arrow, #sidebar ul > li > a:focus .arrow,
-    #sidebar > ul > li.active > a .arrow.open, #sidebar > ul > li > a:hover .arrow.open, #sidebar > ul > li > a:focus .arrow.open{
+    #sidebar > ul > li.active > a .arrow.open, #sidebar > ul > li > a:hover .arrow.open, #sidebar > ul > li > a:focus .arrow.open {
         margin-top: 15px;
     }
 
     #sidebar > ul > li > a, #sidebar > ul > li > ul.sub > li {
         width: 100%;
     }
+
     #sidebar > ul > li > ul.sub > li > a {
-        background: transparent !important ;
+        background: transparent !important;
     }
+
     #sidebar > ul > li > ul.sub > li > a:hover {
         /*background: #4A8BC2 !important ;*/
     }
@@ -172,7 +175,7 @@ Primary use:	Admin Side Used Template.
         right: 35px;
         width: 0;
         height: 0;
-        top:48px;
+        top: 48px;
         border-bottom: 15px solid #282e36;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
@@ -180,7 +183,6 @@ Primary use:	Admin Side Used Template.
 
 
     /*---------*/
-
     .modal-footer .btn {
         margin-bottom: 0px !important;
     }
@@ -190,19 +192,17 @@ Primary use:	Admin Side Used Template.
     }
 
 
-
-
     .mail-box aside {
         display: block;
     }
 
-    .mail-box .sm-side , .mail-box .lg-side{
-        width: 100% ;
+    .mail-box .sm-side, .mail-box .lg-side {
+        width: 100%;
     }
 
     /* full calendar fix */
     .fc-header-right {
-        left:25px;
+        left: 25px;
         position: absolute;
     }
 
@@ -282,15 +282,13 @@ Primary use:	Admin Side Used Template.
     }
 
     .fc-header {
-        margin-bottom:0px !important;
+        margin-bottom: 0px !important;
     }
 
     /*--*/
-
     /*.chart-position {*/
-        /*margin-top: 0px;*/
+    /*margin-top: 0px;*/
     /*}*/
-
     .timeline-desk .album a {
         margin-bottom: 5px;
         margin-right: 4px;
@@ -305,13 +303,14 @@ Primary use:	Admin Side Used Template.
     }
 
     .boxed-page .container #sidebar {
-        position:absolute;
+        position: absolute;
     }
 
     /*--horizontal menu--*/
     .full-width .navbar-toggle {
         border: 1px solid #eaeaea;
     }
+
     .full-width .navbar-toggle .icon-bar {
         background: #c7c7c7;
     }
@@ -323,7 +322,7 @@ Primary use:	Admin Side Used Template.
 
     .horizontal-menu {
         float: left;
-        margin-left:0px;
+        margin-left: 0px;
         width: 70%;
         margin-top: 10px;
     }
@@ -338,6 +337,7 @@ Primary use:	Admin Side Used Template.
         padding-bottom: 10px;
         padding-top: 10px;
     }
+
     /*-----*/
     .custom-bar-chart {
         margin-bottom: 40px;
@@ -347,44 +347,44 @@ Primary use:	Admin Side Used Template.
     .dcjq-icon {
         top: 10px;
     }
+
     ul.sidebar-menu li ul.sub li a {
         padding: 0;
     }
 
     /*---*/
-
     .img-responsive {
         width: 100%;
     }
 
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
 
-  .notify-row, .search, .dont-show , .inbox-head .sr-input, .inbox-head .sr-btn, .language {
-        display: none !important;
-		}
-
-@media (max-width: 480px) {
-
-    .notify-row, .search, .dont-show , .inbox-head .sr-input, .inbox-head .sr-btn, .language{
+    .notify-row, .search, .dont-show, .inbox-head .sr-input, .inbox-head .sr-btn, .language {
         display: none !important;
     }
-	
+
+    @media (max-width: 480px) {
+
+        .notify-row, .search, .dont-show, .inbox-head .sr-input, .inbox-head .sr-btn, .language {
+            display: none !important;
+        }
 
 
- }
+    }
     .mail-box aside {
         display: block;
     }
 
-    .mail-box .sm-side , .mail-box .lg-side{
-        width: 100% ;
+    .mail-box .sm-side, .mail-box .lg-side {
+        width: 100%;
     }
 
     #top_menu .nav > li, ul.top-menu > li {
         float: right;
     }
+
     .hidden-phone {
         display: none !important;
     }
@@ -407,12 +407,14 @@ Primary use:	Admin Side Used Template.
     }
 
     .chart-position {
-       margin-top: 0px;
-     }
+        margin-top: 0px;
+    }
+
     /*--horizontal menu--*/
     .full-width .navbar-toggle {
         border: 1px solid #eaeaea;
     }
+
     .full-width .navbar-toggle .icon-bar {
         background: #c7c7c7;
     }
@@ -424,7 +426,7 @@ Primary use:	Admin Side Used Template.
 
     .horizontal-menu {
         float: left;
-        margin-left:0px;
+        margin-left: 0px;
         width: 100%;
     }
 
@@ -450,14 +452,14 @@ Primary use:	Admin Side Used Template.
 
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
         background-color: #ccc;
-        border-color:#ccc ;
+        border-color: #ccc;
     }
 
     /*chat room*/
-
     .chat-room aside {
         display: block;
     }
+
     .chat-room .left-side, .chat-room .mid-side, .chat-room .right-side, .chat-room .left-side footer {
         width: 100%;
     }
@@ -470,15 +472,16 @@ Primary use:	Admin Side Used Template.
         margin-bottom: 20px;
     }
 
-    .chat-room .left-side , .chat-room .mid-side{
+    .chat-room .left-side, .chat-room .mid-side {
         margin-bottom: 10px;
 
     }
 
-    .chat-room .left-side .user-head , .chat-room-head, .chat-room .right-side .user-head{
+    .chat-room .left-side .user-head, .chat-room-head, .chat-room .right-side .user-head {
         border-radius: 4px 4px 0 0;
         -webit-border-radius: 4px 4px 0 0;
     }
+
     .chat-room .left-side footer {
         border-radius: 0 0 4px 4px;
         -webkit-border-radius: 0 0 4px 4px;
@@ -507,11 +510,11 @@ Primary use:	Admin Side Used Template.
     }
 
     .chat-room .mid-side {
-        margin-bottom: 0!important;
+        margin-bottom: 0 !important;
     }
 }
 
-@media (max-width:320px) {
+@media (max-width: 320px) {
     .login-social-link a {
         padding: 15px 17px !important;
     }
@@ -521,11 +524,11 @@ Primary use:	Admin Side Used Template.
     }
 
     .mail-box aside {
-        display: block ;
+        display: block;
     }
 
-    .mail-box .sm-side , .mail-box .lg-side{
-        width: 100% ;
+    .mail-box .sm-side, .mail-box .lg-side {
+        width: 100%;
     }
 
     #top_menu .nav > li, ul.top-menu > li {
@@ -561,6 +564,7 @@ Primary use:	Admin Side Used Template.
         margin: 10% auto;
         max-width: 310px;
     }
+
     .lock-input {
         width: 82%;
     }
@@ -581,76 +585,77 @@ Primary use:	Admin Side Used Template.
     }
 }
 
-@media (max-width: 600px){
-	/**-------------------------------------------SOCIAL APPS-------------------------------------------**/ul.timeline li.centering-line{
-		left: 15px;
-		margin-left: 0px;
-	}
+@media (max-width: 600px) {
+    /**-------------------------------------------SOCIAL APPS-------------------------------------------**/
+    ul.timeline li.centering-line {
+        left: 15px;
+        margin-left: 0px;
+    }
 
-	ul.timeline li.item-timeline{
-		width: 100%;
-	}
+    ul.timeline li.item-timeline {
+        width: 100%;
+    }
 
-	ul.timeline li:nth-child(even).item-timeline{
-		float: left;
-		clear: left;
-	}
+    ul.timeline li:nth-child(even).item-timeline {
+        float: left;
+        clear: left;
+    }
 
-	ul.timeline li:nth-child(odd).item-timeline{
-		float: left;
-		clear: left;
-	}
+    ul.timeline li:nth-child(odd).item-timeline {
+        float: left;
+        clear: left;
+    }
 
-	ul.timeline li:nth-child(odd).item-timeline.highlight,ul.timeline li:nth-child(odd).item-timeline.highlight{
-		float: left;
-		clear: left;
-	}
+    ul.timeline li:nth-child(odd).item-timeline.highlight, ul.timeline li:nth-child(odd).item-timeline.highlight {
+        float: left;
+        clear: left;
+    }
 
-	ul.timeline li.item-timeline .inner-content{
-		margin: 10px;
-		margin-left: 35px;
-	}
+    ul.timeline li.item-timeline .inner-content {
+        margin: 10px;
+        margin-left: 35px;
+    }
 
-	ul.timeline li:nth-child(even).item-timeline.highlight .buletan,ul.timeline li:nth-child(odd).item-timeline.highlight .buletan,ul.timeline li:nth-child(even).item-timeline .buletan,ul.timeline li:nth-child(odd).item-timeline .buletan{
-		left: 11px;
-		top: 35px;
-		margin-left: 0;
-	}
+    ul.timeline li:nth-child(even).item-timeline.highlight .buletan, ul.timeline li:nth-child(odd).item-timeline.highlight .buletan, ul.timeline li:nth-child(even).item-timeline .buletan, ul.timeline li:nth-child(odd).item-timeline .buletan {
+        left: 11px;
+        top: 35px;
+        margin-left: 0;
+    }
 
-	ul.timeline li.item-timeline:nth-child(even):before{
-		top: 29px;
-		right: auto;
-		left: 25px;
-		border-left: 0px solid #fff;
-		border-right: 12px solid #fff;
-		border-right-color: #fff;
-	}
+    ul.timeline li.item-timeline:nth-child(even):before {
+        top: 29px;
+        right: auto;
+        left: 25px;
+        border-left: 0px solid #fff;
+        border-right: 12px solid #fff;
+        border-right-color: #fff;
+    }
 
-	ul.timeline li.item-timeline:nth-child(odd).highlight:before,ul.timeline li.item-timeline:nth-child(even).highlight:before,ul.timeline li.item-timeline:nth-child(odd):before{
-		top: 29px;
-		left: 25px;
-		display: inline-block;
-		border-top: 12px solid transparent;
-		border-right: 12px solid #fff;
-		border-bottom: 12px solid transparent;
-		border-right-color: #fff;
-		content: '';
-	}
+    ul.timeline li.item-timeline:nth-child(odd).highlight:before, ul.timeline li.item-timeline:nth-child(even).highlight:before, ul.timeline li.item-timeline:nth-child(odd):before {
+        top: 29px;
+        left: 25px;
+        display: inline-block;
+        border-top: 12px solid transparent;
+        border-right: 12px solid #fff;
+        border-bottom: 12px solid transparent;
+        border-right-color: #fff;
+        content: '';
+    }
 
-	ul.timeline li.center-timeline-cat .inner{
-		border-radius: 0 5px 5px 0;
-		margin: 20px 0 20px 19px;
-	}
+    ul.timeline li.center-timeline-cat .inner {
+        border-radius: 0 5px 5px 0;
+        margin: 20px 0 20px 19px;
+    }
 
-	ul.timeline li:first-child.center-timeline-cat .inner,ul.timeline li:last-child.center-timeline-cat .inner{
-		margin: 20px 0 20px 19px;
-	}
+    ul.timeline li:first-child.center-timeline-cat .inner, ul.timeline li:last-child.center-timeline-cat .inner {
+        margin: 20px 0 20px 19px;
+    }
 
-	.featured-post-wide .featured-text{
-		position: relative;
-		width: 100%;
-		padding: 5px 15px 15px 15px;
-	}
+    .featured-post-wide .featured-text {
+        position: relative;
+        width: 100%;
+        padding: 5px 15px 15px 15px;
+    }
 
 }
 

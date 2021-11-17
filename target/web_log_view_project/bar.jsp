@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +15,11 @@
     <script src="<%=basePath%>/js/echarts.min.js"></script>
 
 
-
 </head>
 <body>
 <div id="main" style="width: 1200px; height: 600px;"></div>
 <div id="map" style="width: 1200px; height: 400px;"></div>
+<div id="sharpdataset" style="width: 1200px; height: 600px;"></div>
 
 <%--柱状图--%>
 <script type="text/javascript">
@@ -124,8 +124,8 @@
 
 
             var option = {
-                title:{
-                    text:'流量信息',
+                title: {
+                    text: '流量信息',
                 },
                 tooltip: {
                     trigger: 'axis',
@@ -134,7 +134,7 @@
                     }
                 },
                 legend: {
-                    data: ['pVNum', 'uVNum', 'iPNum', 'newUvNum','visitNum']
+                    data: ['pVNum', 'uVNum', 'iPNum', 'newUvNum', 'visitNum']
                 },
                 toolbox: {
                     show: true,
@@ -142,18 +142,18 @@
                     left: 'right',
                     top: 'center',
                     feature: {
-                        mark: { show: true },
-                        dataView: { show: true, readOnly: false },
-                        magicType: { show: true, type: ['line', 'bar', 'stack'] },
-                        restore: { show: true },
-                        saveAsImage: { show: true }
+                        mark: {show: true},
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar', 'stack']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
                     }
                 },
                 xAxis: [
                     {
                         type: 'category',
-                        axisTick: { show: false },
-                        data:  []
+                        axisTick: {show: false},
+                        data: []
                     }
                 ],
                 yAxis: [
@@ -239,13 +239,12 @@
     );
 
 
-
 </script>
 
 <%--曲线图--%>
 <script type="text/javascript">
     $(document).ready(
-        function() {
+        function () {
             var myChart = echarts.init(document.getElementById('map'));
             // 显示标题，图例和空的坐标轴
             myChart.setOption({
@@ -256,7 +255,7 @@
                     trigger: 'axis'
                 },
                 legend: {
-                    data:[]
+                    data: []
                 },
                 grid: {
                     left: '3%',
@@ -269,8 +268,8 @@
                         saveAsImage: {}
                     }
                 },
-                legend : {
-                    data : [ '浏览次数','独立访客','ip', '新独立访客','访问次数' ]
+                legend: {
+                    data: ['浏览次数', '独立访客', 'ip', '新独立访客', '访问次数']
                 },
                 xAxis: {
                     type: 'category',
@@ -303,7 +302,7 @@
                         name: '新独立访客',
                         type: 'line',
                         stack: '总量',
-                        data:[]
+                        data: []
                     },
                     {
                         name: '访问次数',
@@ -315,30 +314,30 @@
             });
             myChart.showLoading();
             $.ajax({
-                type:"post",
-                url:"<%=basePath%>/flowInformationController",
-                dataType:"json",
-                success:function(data) {
+                type: "post",
+                url: "<%=basePath%>/flowInformationController",
+                dataType: "json",
+                success: function (data) {
                     myChart.setOption({
-                        xAxis : {
-                            data : data.dateStr
+                        xAxis: {
+                            data: data.dateStr
                         },
-                        series : [ {
+                        series: [{
                             // 根据名字对应到相应的系列
-                            name : '浏览次数',
-                            data : data.pVNum
-                        },{
-                            name : '独立访客',
-                            data : data.uVNum
-                        },{
-                            name : 'ip',
-                            data : data.iPNum
-                        },{
-                            name : '新独立访客',
-                            data : data.newUvNum
-                        },{
-                            name : '访问次数',
-                            data : data.visitNum
+                            name: '浏览次数',
+                            data: data.pVNum
+                        }, {
+                            name: '独立访客',
+                            data: data.uVNum
+                        }, {
+                            name: 'ip',
+                            data: data.iPNum
+                        }, {
+                            name: '新独立访客',
+                            data: data.newUvNum
+                        }, {
+                            name: '访问次数',
+                            data: data.visitNum
                         }]
                     });
                     //数据加载完成后再调用 hideLoading 方法隐藏加载动画
@@ -348,5 +347,7 @@
         });
 
 </script>
+
+
 </body>
 </html>
